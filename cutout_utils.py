@@ -1991,10 +1991,12 @@ def cutout_VISTA(outdir, RA, DEC, tile, id, save = False, db = "vista", circle =
 	import sqlutil
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	fig = plt.figure()
 	files = []

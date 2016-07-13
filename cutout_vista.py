@@ -16,10 +16,12 @@ def makestamp(ra, dec, filename, chipno, size=60.0, cmap='gray', annotate=None, 
 	import xmlrpclib
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	server = config.get("vista cutouts", server)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	server = config.get("vista cutouts", "server")
 	
-	xms = xmlrpclib.ServerProxy(server)
+	xms = xmlrpclib.ServerProxy("http://apm49.ast.cam.ac.uk:8000")
 	dd = {'filename': filename, 'hdu': chipno, 'ra': ra, 'dec': dec, 'size': size, 'cmap': cmap, 'ctype': ctype, "db": db}
 	# By default catalogue sources are overplotted. To turn that off use instead of the above line this
 	# # dd = {'filename': filename, 'hdu': chipno, 'ra': ra, 'dec': dec, 'size': size, 'cmap': cmap, 'nocat': True}
@@ -52,10 +54,13 @@ def querydb(ra,dec, size = 60.0, prefix='img',db="vista", onlytiles=True, ctype=
 	import xmlrpclib
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	server = config.get("vista cutouts", server)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	server = config.get("vista cutouts", "server")
 
-	xms = xmlrpclib.ServerProxy(server)
+	print server
+	xms = xmlrpclib.ServerProxy("http://apm49.ast.cam.ac.uk:8000")
 	dd={'ra': ra, 'dec': dec, 'db': db, 'onlytiles': onlytiles, 'allfiles': allfiles}
 	filenames = []
 	apm_filenames = []

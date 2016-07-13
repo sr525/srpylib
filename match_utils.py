@@ -159,10 +159,12 @@ def VIKING_match(t, RA_main, DEC_main, width = 0.0004, w_units = "degrees", c_gr
 	import sqlutil
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
@@ -298,10 +300,12 @@ def SDSS_match(t, RA_main, DEC_main, width = 0.0004, w_units = "degrees", c_grap
 	from astropy.table import Table, vstack
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
@@ -473,10 +477,12 @@ def WISE_match(t, RA_main, DEC_main, width = 0.0004, w_units = "degrees", c_grap
 	import sqlutil
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
@@ -620,10 +626,12 @@ def VST_match(t, RA_main, DEC_main, c_graph = True, width = 0.0004, w_units = "d
 	import sqlutil
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
@@ -759,10 +767,12 @@ def GALEX_match(t, RA_main, DEC_main, width = 0.0004, w_units = "degrees", c_gra
 	import sqlutil
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
@@ -917,10 +927,12 @@ def VHS_match(t, RA_main, DEC_main, c_graph = True, width = 0.0004, w_units = "d
 	from astropy.table import Table, vstack
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
@@ -1105,10 +1117,12 @@ def VHS_match_all_cols(t, RA_main, DEC_main, survey = "des"):
 	from astropy.table import Table, hstack
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	n = 0
 	any_matches = False
@@ -1175,10 +1189,12 @@ def UKIDSS_match(t, RA_main, DEC_main, c_graph = True, width = 0.0004, w_units =
 	from astropy.table import Table, vstack
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
@@ -1321,10 +1337,12 @@ def DES_match(t, RA_main, DEC_main, c_graph = True, width = 0.0004, w_units = "d
 	from astropy.table import Table, vstack
 	import ConfigParser
 
-	config_file = "srpylib.cfg"
-	uname = config.get("wsdb", uname)
-	pword = config.get("wsdb", pword)
-	host = config.get("wsdb", host)
+	config_file = "/home/sr525/Python_Code/srpylib/srpylib.cfg"
+	config = ConfigParser.RawConfigParser()
+	config.read(config_file)
+	uname = config.get("wsdb", "uname")
+	pword = config.get("wsdb", "pword")
+	host = config.get("wsdb", "host")
 
 	if w_units == "arcsecs":
 		width = width / 3600.0
